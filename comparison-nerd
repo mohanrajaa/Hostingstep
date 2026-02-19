@@ -1,0 +1,766 @@
+<!-- Mobile-Responsive Top WordPress Hosting Picks - Vertical Layout for Mobile -->
+<div style="max-width: 1290px; margin: 0 auto; padding: 2rem 1rem; font-family: Inter, sans-serif;">
+    
+    <!-- Section Header with Interactive Controls -->
+    <div style="text-align: center; margin-bottom: 3rem;">
+        <h2 style="font-size: 36px; font-weight: 600; color: #222222; margin-bottom: 1rem;">Our Top WordPress Hosting Picks At a Glance</h2>
+        <p style="font-size: 19px; line-height: 1.6; color: #515151; margin-bottom: 2rem;">Hand-picked based on 12+ months of continuous performance testing across 17 hosting providers</p>
+        
+        <!-- Interactive Controls -->
+        <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-bottom: 2rem;">
+            <!-- Filter Buttons -->
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center;">
+                <button class="filter-btn active" data-filter="all" style="padding: 8px 16px; border: 2px solid #2B6CB0; background: #2B6CB0; color: white; border-radius: 4px; font-size: 14px; font-weight: 500; cursor: pointer; transition: all 0.3s ease;">All Hosts</button>
+                <button class="filter-btn" data-filter="shared" style="padding: 8px 16px; border: 2px solid #2B6CB0; background: white; color: #2B6CB0; border-radius: 4px; font-size: 14px; font-weight: 500; cursor: pointer; transition: all 0.3s ease;">Shared Hosting</button>
+                <button class="filter-btn" data-filter="cloud" style="padding: 8px 16px; border: 2px solid #2B6CB0; background: white; color: #2B6CB0; border-radius: 4px; font-size: 14px; font-weight: 500; cursor: pointer; transition: all 0.3s ease;">Cloud Hosting</button>
+                <button class="filter-btn" data-filter="managed" style="padding: 8px 16px; border: 2px solid #2B6CB0; background: white; color: #2B6CB0; border-radius: 4px; font-size: 14px; font-weight: 500; cursor: pointer; transition: all 0.3s ease;">Managed WordPress</button>
+            </div>
+            
+            <!-- Sort Dropdown -->
+            <select id="sortSelect" style="padding: 8px 12px; border: 2px solid #E1E1E1; border-radius: 4px; font-size: 14px; background: white; color: #222222;">
+                <option value="default">Sort by Performance</option>
+                <option value="ttfb">TTFB (Fastest First)</option>
+                <option value="uptime">Uptime (Highest First)</option>
+                <option value="load">Load Handling (Best First)</option>
+                <option value="price">Price (Lowest First)</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Provider Cards - Responsive Layout -->
+    <div id="providersGrid" style="display: flex; flex-direction: column; gap: 2rem; margin-bottom: 2rem;">
+        
+        <!-- GreenGeeks Card -->
+        <div class="provider-card" data-category="shared" data-ttfb="417" data-uptime="99.98" data-load="26" data-price="35" style="background: white; border-radius: 8px; box-shadow: 0 5px 23px rgba(188, 207, 219, 0.35); padding: 0; position: relative; transition: transform 0.3s ease; overflow: hidden;">
+            
+            <!-- Category Badge -->
+            <div style="position: absolute; top: 0; left: 0; right: 0; background: #4A90E2; color: white; padding: 12px 20px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; text-align: center;">
+                BEST FOR FAST SHARED HOSTING
+            </div>
+            
+            <!-- Main Content Row -->
+            <div class="main-content-row" style="display: flex; align-items: stretch; padding: 3rem 2rem 1.5rem 2rem; gap: 2rem; min-height: 180px;">
+                
+                <!-- Left Section: Provider Info + Highlight -->
+                <div class="provider-info" style="flex: 1; min-width: 280px;">
+                    <!-- Provider Header -->
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                        <img src="https://hostingstep.com/wp-content/uploads/2017/07/GreenGeeks-Loog.jpeg" alt="GreenGeeks" style="width: 60px; height: 60px; border-radius: 8px; object-fit: contain;">
+                        <div>
+                            <h3 style="font-size: 24px; font-weight: 600; color: #222222; margin: 0;">GreenGeeks</h3>
+                            <p style="font-size: 14px; color: #626262; margin: 0;">Starting Price: $2.95/month (Lite plan)</p>
+                        </div>
+                    </div>
+
+                    <!-- Key Highlight -->
+                    <div style="background: #F0F7FF; border-left: 4px solid #2B6CB0; padding: 12px 16px; border-radius: 0 4px 4px 0;">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                            <div style="width: 24px; height: 24px; background: #2B6CB0; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 12px;">&#x26a1;</div>
+                            <span style="font-weight: 600; color: #222222;">Consistently Fastest</span>
+                        </div>
+                        <p style="margin: 0; font-size: 14px; color: #515151; line-height: 1.4;">Consistently rated as the fastest shared hosting since 2020. They outperform many premium managed WordPress hosts.</p>
+                    </div>
+                </div>
+
+                <!-- Center Section: Performance Metrics -->
+                <div class="performance-metrics" style="flex: 1; min-width: 300px;">
+                    <h4 style="font-size: 16px; font-weight: 600; color: #222222; margin-bottom: 1.5rem; text-align: center;">PERFORMANCE METRICS</h4>
+                    
+                    <!-- TTFB Progress Bar -->
+                    <div style="margin-bottom: 1rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+                            <span style="font-size: 14px; color: #222222; font-weight: 500;">TTFB</span>
+                            <span style="font-size: 14px; font-weight: 600; color: #66BB6A;">417ms (Strong)</span>
+                        </div>
+                        <div style="height: 8px; background-color: #E1E1E1; border-radius: 4px; overflow: hidden;">
+                            <div style="height: 100%; width: 75%; background: linear-gradient(90deg, #66BB6A 0%, #4CAF50 100%); border-radius: 4px; transition: width 0.6s ease;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Uptime Progress Bar -->
+                    <div style="margin-bottom: 1rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+                            <span style="font-size: 14px; color: #222222; font-weight: 500;">Uptime</span>
+                            <span style="font-size: 14px; font-weight: 600; color: #66BB6A;">99.98% (Strong)</span>
+                        </div>
+                        <div style="height: 8px; background-color: #E1E1E1; border-radius: 4px; overflow: hidden;">
+                            <div style="height: 100%; width: 80%; background: linear-gradient(90deg, #66BB6A 0%, #4CAF50 100%); border-radius: 4px; transition: width 0.6s ease;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Load Handling Progress Bar -->
+                    <div style="margin-bottom: 1rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+                            <span style="font-size: 14px; color: #222222; font-weight: 500;">Load Handling</span>
+                            <span style="font-size: 14px; font-weight: 600; color: #4CAF50;">26ms (Elite)</span>
+                        </div>
+                        <div style="height: 8px; background-color: #E1E1E1; border-radius: 4px; overflow: hidden;">
+                            <div style="height: 100%; width: 95%; background: linear-gradient(90deg, #4CAF50 0%, #2E7D32 100%); border-radius: 4px; transition: width 0.6s ease;"></div>
+                        </div>
+                    </div>
+
+                    <!-- 1-Year Cost -->
+                    <div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+                            <span style="font-size: 14px; color: #222222; font-weight: 500;">1-Year Cost</span>
+                            <span style="font-size: 14px; font-weight: 600; color: #4CAF50;">$35 (Best Value)</span>
+                        </div>
+                        <div style="height: 8px; background-color: #E1E1E1; border-radius: 4px; overflow: hidden;">
+                            <div style="height: 100%; width: 100%; background: linear-gradient(90deg, #4CAF50 0%, #2E7D32 100%); border-radius: 4px; transition: width 0.6s ease;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Section: CTA Button -->
+                <div class="cta-section" style="flex: 0 0 200px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                    <a href="https://hostingstep.com/tested/greengeeks" target="_blank" rel="nofollow" style="display: block; width: 200px; padding: 18px 20px; background: #2B6CB0; color: white; text-decoration: none; border-radius: 4px; font-family: 'Work Sans', sans-serif; font-size: 18px; font-weight: 500; text-align: center; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(43, 108, 176, 0.3); white-space: nowrap; overflow: hidden;">
+                        Visit GreenGeeks →
+                    </a>
+                    <p style="margin: 10px 0 0; font-size: 12px; color: #626262; text-align: center;">On GreenGeeks' Website</p>
+                </div>
+            </div>
+
+            <!-- Description Section -->
+            <div class="description-section" style="padding: 0 2rem 2rem 2rem; border-top: 1px solid #F7F7F7;">
+                <div style="padding-top: 1.5rem;">
+                    <p style="font-size: 15px; line-height: 1.6; color: #222222; margin-bottom: 0.8rem;"><strong>Why We Recommend Them:</strong> GreenGeeks has been consistently top performing in our performance tests for the last 5 years. They rank #3 in load handling out of #17 hosts tested. They also offer the fastest TTFB #1 among shared hosting companies.</p>
+                    
+                    <p style="font-size: 15px; line-height: 1.6; color: #4CAF50; margin-bottom: 0.8rem;"><strong>Ideal For:</strong> Beginners, bloggers and all those who are just getting started. It costs just $35 for first year, the cheapest price for 1-year billing. The caching comes pre-installed, no need for any configurations, ready to fly from first day onwards.</p>
+                    
+                    <p style="font-size: 15px; line-height: 1.6; color: #F44336; margin: 0;"><strong>Limitations:</strong> No integrated CDN. Sites with global traffic should look somewhere else.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hostinger Card -->
+        <div class="provider-card" data-category="shared" data-ttfb="491" data-uptime="99.99" data-load="247" data-price="32" style="background: white; border-radius: 8px; box-shadow: 0 5px 23px rgba(188, 207, 219, 0.35); padding: 0; position: relative; transition: transform 0.3s ease; overflow: hidden;">
+            
+            <!-- Category Badge -->
+            <div style="position: absolute; top: 0; left: 0; right: 0; background: #4A90E2; color: white; padding: 12px 20px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; text-align: center;">
+                BEST SHARED HOSTING FOR RELIABILITY
+            </div>
+            
+            <!-- Main Content Row -->
+            <div class="main-content-row" style="display: flex; align-items: stretch; padding: 3rem 2rem 1.5rem 2rem; gap: 2rem; min-height: 180px;">
+                
+                <!-- Left Section: Provider Info + Highlight -->
+                <div class="provider-info" style="flex: 1; min-width: 280px;">
+                    <!-- Provider Header -->
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                        <img src="https://hostingstep.com/wp-content/uploads/2021/03/Hostinger.jpeg" alt="Hostinger" style="width: 60px; height: 60px; border-radius: 8px; object-fit: contain;">
+                        <div>
+                            <h3 style="font-size: 24px; font-weight: 600; color: #222222; margin: 0;">Hostinger</h3>
+                            <p style="font-size: 14px; color: #626262; margin: 0;">Starting Price: $2.69/month</p>
+                        </div>
+                    </div>
+
+                    <!-- Key Highlight -->
+                    <div style="background: #F0F7FF; border-left: 4px solid #2B6CB0; padding: 12px 16px; border-radius: 0 4px 4px 0;">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                            <div style="width: 24px; height: 24px; background: #2B6CB0; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 14px;">✓</div>
+                            <span style="font-weight: 600; color: #222222;">Exceptional Reliability</span>
+                        </div>
+                        <p style="margin: 0; font-size: 14px; color: #515151; line-height: 1.4;">Exceptional reliability for a shared hosting provider with 25 websites support on starter plan.</p>
+                    </div>
+                </div>
+
+                <!-- Center Section: Performance Metrics -->
+                <div class="performance-metrics" style="flex: 1; min-width: 300px;">
+                    <h4 style="font-size: 16px; font-weight: 600; color: #222222; margin-bottom: 1.5rem; text-align: center;">PERFORMANCE METRICS</h4>
+                    
+                    <!-- TTFB Progress Bar -->
+                    <div style="margin-bottom: 1rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+                            <span style="font-size: 14px; color: #222222; font-weight: 500;">TTFB</span>
+                            <span style="font-size: 14px; font-weight: 600; color: #4CAF50;">491ms (Strong)</span>
+                        </div>
+                        <div style="height: 8px; background-color: #E1E1E1; border-radius: 4px; overflow: hidden;">
+                            <div style="height: 100%; width: 50%; background: linear-gradient(90deg, #4CAF50 0%, #4CAF50 100%); border-radius: 4px; transition: width 0.6s ease;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Uptime Progress Bar -->
+                    <div style="margin-bottom: 1rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+                            <span style="font-size: 14px; color: #222222; font-weight: 500;">Uptime</span>
+                            <span style="font-size: 14px; font-weight: 600; color: #4CAF50;">99.99% (Elite)</span>
+                        </div>
+                        <div style="height: 8px; background-color: #E1E1E1; border-radius: 4px; overflow: hidden;">
+                            <div style="height: 100%; width: 100%; background: linear-gradient(90deg, #4CAF50 0%, #2E7D32 100%); border-radius: 4px; transition: width 0.6s ease;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Load Handling Progress Bar -->
+                    <div style="margin-bottom: 1rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+                            <span style="font-size: 14px; color: #222222; font-weight: 500;">Load Handling</span>
+                            <span style="font-size: 14px; font-weight: 600; color: #4CAF50;">31ms (Average)</span>
+                        </div>
+                        <div style="height: 8px; background-color: #E1E1E1; border-radius: 4px; overflow: hidden;">
+                            <div style="height: 100%; width: 50%; background: linear-gradient(90deg, #4CAF50 0%, #4CAF50 100%); border-radius: 4px; transition: width 0.6s ease;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Multi-site Support -->
+                    <div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+                            <span style="font-size: 14px; color: #222222; font-weight: 500;">Multi-site Support</span>
+                            <span style="font-size: 14px; font-weight: 600; color: #4CAF50;">25 sites (Starter)</span>
+                        </div>
+                        <div style="height: 8px; background-color: #E1E1E1; border-radius: 4px; overflow: hidden;">
+                            <div style="height: 100%; width: 90%; background: linear-gradient(90deg, #4CAF50 0%, #2E7D32 100%); border-radius: 4px; transition: width 0.6s ease;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Section: CTA Button -->
+                <div class="cta-section" style="flex: 0 0 200px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                    <a href="https://hostingstep.com/tested/hostinger" target="_blank" rel="nofollow" style="display: block; width: 200px; padding: 18px 20px; background: #2B6CB0; color: white; text-decoration: none; border-radius: 4px; font-family: 'Work Sans', sans-serif; font-size: 18px; font-weight: 500; text-align: center; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(43, 108, 176, 0.3); white-space: nowrap; overflow: hidden;">
+                        Visit Hostinger →
+                    </a>
+                    <p style="margin: 10px 0 0; font-size: 12px; color: #626262; text-align: center;">On Hostinger's Website</p>
+                </div>
+            </div>
+
+            <!-- Description Section -->
+            <div class="description-section" style="padding: 0 2rem 2rem 2rem; border-top: 1px solid #F7F7F7;">
+                <div style="padding-top: 1.5rem;">
+                    <p style="font-size: 15px; line-height: 1.6; color: #222222; margin-bottom: 0.8rem;"><strong>Why It's Best for Shared Hosting:</strong> Hostinger is the only shared hosting with 99.99% uptime reliability recording only 2 minutes of downtime in the last 6 months. Their inode limits (400,000 - 2,000,000) are the highest among any of the companies in the industry. Plus, you can host up to 25 websites for just $2.99/month, the lowest per site pricing.</p>
+                    
+                    <p style="font-size: 15px; line-height: 1.6; color: #4CAF50; margin-bottom: 0.8rem;"><strong>Ideal For:</strong> Beginners, small businesses and multi-site owners who are looking for reliable shared hosting with best performance to price value. It also offers highest (13) data center options, ideal for owners looking for best hosting in their targeted regions. </p>
+                    
+                    <p style="font-size: 15px; line-height: 1.6; color: #F44336; margin: 0;"><strong>Limitations:</strong> Their starter plan doesn't include Hostinger CDN, so the site loads slower during load handling. For sites with high traffic, Business plan is recommended which comes with pre-configured CDN.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cloudways Card -->
+        <div class="provider-card" data-category="cloud" data-ttfb="441" data-uptime="99.99" data-load="128" data-price="132" style="background: white; border-radius: 8px; box-shadow: 0 5px 23px rgba(188, 207, 219, 0.35); padding: 0; position: relative; transition: transform 0.3s ease; overflow: hidden;">
+            
+            <!-- Category Badge -->
+            <div style="position: absolute; top: 0; left: 0; right: 0; background: #4A90E2; color: white; padding: 12px 20px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; text-align: center;">
+                BEST FOR MANAGED CLOUD HOSTING
+            </div>
+            
+            <!-- Main Content Row -->
+            <div class="main-content-row" style="display: flex; align-items: stretch; padding: 3rem 2rem 1.5rem 2rem; gap: 2rem; min-height: 180px;">
+                
+                <!-- Left Section: Provider Info + Highlight -->
+                <div class="provider-info" style="flex: 1; min-width: 280px;">
+                    <!-- Provider Header -->
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                        <img src="https://hostingstep.com/wp-content/uploads/2024/06/image-9.png" alt="Cloudways" style="width: 60px; height: 60px; border-radius: 8px; object-fit: contain;">
+                        <div>
+                            <h3 style="font-size: 24px; font-weight: 600; color: #222222; margin: 0;">Cloudways</h3>
+                            <p style="font-size: 14px; color: #626262; margin: 0;">Starting Price: $11/month (DigitalOcean 1GB plan)</p>
+                        </div>
+                    </div>
+
+                    <!-- Key Highlight -->
+                    <div style="background: #F0F7FF; border-left: 4px solid #2B6CB0; padding: 12px 16px; border-radius: 0 4px 4px 0;">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                            <div style="width: 24px; height: 24px; background: #2B6CB0; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 12px;">&#x2601;</div>
+                            <span style="font-weight: 600; color: #222222;">Multiple Cloud Providers</span>
+                        </div>
+                        <p style="margin: 0; font-size: 14px; color: #515151; line-height: 1.4;">Managed Cloud hosting with choice to host among five different cloud providers with unlimited websites.</p>
+                    </div>
+                </div>
+
+                <!-- Center Section: Performance Metrics -->
+                <div class="performance-metrics" style="flex: 1; min-width: 300px;">
+                    <h4 style="font-size: 16px; font-weight: 600; color: #222222; margin-bottom: 1.5rem; text-align: center;">PERFORMANCE METRICS</h4>
+                    
+                    <!-- TTFB Progress Bar -->
+                    <div style="margin-bottom: 1rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+                            <span style="font-size: 14px; color: #222222; font-weight: 500;">TTFB</span>
+                            <span style="font-size: 14px; font-weight: 600; color: #66BB6A;">441ms (Strong)</span>
+                        </div>
+                        <div style="height: 8px; background-color: #E1E1E1; border-radius: 4px; overflow: hidden;">
+                            <div style="height: 100%; width: 70%; background: linear-gradient(90deg, #66BB6A 0%, #4CAF50 100%); border-radius: 4px; transition: width 0.6s ease;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Uptime Progress Bar -->
+                    <div style="margin-bottom: 1rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+                            <span style="font-size: 14px; color: #222222; font-weight: 500;">Uptime</span>
+                            <span style="font-size: 14px; font-weight: 600; color: #4CAF50;">99.99% (Elite)</span>
+                        </div>
+                        <div style="height: 8px; background-color: #E1E1E1; border-radius: 4px; overflow: hidden;">
+                            <div style="height: 100%; width: 100%; background: linear-gradient(90deg, #4CAF50 0%, #2E7D32 100%); border-radius: 4px; transition: width 0.6s ease;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Load Handling Progress Bar -->
+                    <div style="margin-bottom: 1rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+                            <span style="font-size: 14px; color: #222222; font-weight: 500;">Load Handling</span>
+                            <span style="font-size: 14px; font-weight: 600; color: #66BB6A;">128ms (Strong)</span>
+                        </div>
+                        <div style="height: 8px; background-color: #E1E1E1; border-radius: 4px; overflow: hidden;">
+                            <div style="height: 100%; width: 75%; background: linear-gradient(90deg, #66BB6A 0%, #4CAF50 100%); border-radius: 4px; transition: width 0.6s ease;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Cloud Providers -->
+                    <div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+                            <span style="font-size: 14px; color: #222222; font-weight: 500;">Cloud Options</span>
+                            <span style="font-size: 14px; font-weight: 600; color: #2B6CB0;">5 providers (DO, Vultr, AWS, GCP)</span>
+                        </div>
+                        <div style="height: 8px; background-color: #E1E1E1; border-radius: 4px; overflow: hidden;">
+                            <div style="height: 100%; width: 95%; background: linear-gradient(90deg, #2B6CB0 0%, #215387 100%); border-radius: 4px; transition: width 0.6s ease;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Section: CTA Button -->
+                <div class="cta-section" style="flex: 0 0 200px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                    <a href="https://hostingstep.com/tested/cloudways" target="_blank" rel="nofollow" style="display: block; width: 200px; padding: 18px 20px; background: #2B6CB0; color: white; text-decoration: none; border-radius: 4px; font-family: 'Work Sans', sans-serif; font-size: 18px; font-weight: 500; text-align: center; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(43, 108, 176, 0.3); white-space: nowrap; overflow: hidden;">
+                        Visit Cloudways →
+                    </a>
+                    <p style="margin: 10px 0 0; font-size: 12px; color: #626262; text-align: center;">On Cloudways Website</p>
+                </div>
+            </div>
+
+            <!-- Description Section -->
+            <div class="description-section" style="padding: 0 2rem 2rem 2rem; border-top: 1px solid #F7F7F7;">
+                <div style="padding-top: 1.5rem;">
+                    <p style="font-size: 15px; line-height: 1.6; color: #222222; margin-bottom: 0.8rem;"><strong>Why It's Best for Cloud Hosting:</strong> Cloudways is the only company that allows you directly host on five different cloud providers through its managed dashboard. At $11/month, you can start hosting unlimited number of websites.</p>
+                    
+                    <p style="font-size: 15px; line-height: 1.6; color: #4CAF50; margin-bottom: 0.8rem;"><strong>Ideal For:</strong> multi-site business owners, developers and businesses that needs Cloud hosting infrastructure without the complexity of managing servers directly.</p>
+                    
+                    <p style="font-size: 15px; line-height: 1.6; color: #F44336; margin: 0;"><strong>Limitations:</strong> Learning curve required for beginners.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- WP Engine Card -->
+        <div class="provider-card" data-category="managed" data-ttfb="354" data-uptime="99.99" data-load="19" data-price="240" style="background: white; border-radius: 8px; box-shadow: 0 5px 23px rgba(188, 207, 219, 0.35); padding: 0; position: relative; transition: transform 0.3s ease; overflow: hidden;">
+            
+            <!-- Category Badge -->
+            <div style="position: absolute; top: 0; left: 0; right: 0; background: #4A90E2; color: white; padding: 12px 20px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; text-align: center;">
+                BEST FOR HIGH-PERFORMANCE WORDPRESS HOSTING
+            </div>
+            
+            <!-- Main Content Row -->
+            <div class="main-content-row" style="display: flex; align-items: stretch; padding: 3rem 2rem 1.5rem 2rem; gap: 2rem; min-height: 180px;">
+                
+                <!-- Left Section: Provider Info + Highlight -->
+                <div class="provider-info" style="flex: 1; min-width: 280px;">
+                    <!-- Provider Header -->
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                        <img src="https://hostingstep.com/wp-content/uploads/2021/03/WP-Engine-logo.png" alt="WP Engine" style="width: 60px; height: 60px; border-radius: 8px; object-fit: contain;">
+                        <div>
+                            <h3 style="font-size: 24px; font-weight: 600; color: #222222; margin: 0;">WP Engine</h3>
+                            <p style="font-size: 14px; color: #626262; margin: 0;">Starting Price: $20/month (Startup plan)</p>
+                        </div>
+                    </div>
+
+                    <!-- Key Highlight -->
+                    <div style="background: #F0F7FF; border-left: 4px solid #2B6CB0; padding: 12px 16px; border-radius: 0 4px 4px 0;">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                            <div style="width: 24px; height: 24px; background: #2B6CB0; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 12px;">&#x26a1;</div>
+                            <span style="font-weight: 600; color: #222222;">Elite Performance</span>
+                        </div>
+                        <p style="margin: 0; font-size: 14px; color: #515151; line-height: 1.4;">Elite performance with Cloudflare Enterprise integration.</p>
+                    </div>
+                </div>
+
+                <!-- Center Section: Performance Metrics -->
+                <div class="performance-metrics" style="flex: 1; min-width: 300px;">
+                    <h4 style="font-size: 16px; font-weight: 600; color: #222222; margin-bottom: 1.5rem; text-align: center;">PERFORMANCE METRICS</h4>
+                    
+                    <!-- TTFB Progress Bar -->
+                    <div style="margin-bottom: 1rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+                            <span style="font-size: 14px; color: #222222; font-weight: 500;">TTFB</span>
+                            <span style="font-size: 14px; font-weight: 600; color: #4CAF50;">354ms (Elite)</span>
+                        </div>
+                        <div style="height: 8px; background-color: #E1E1E1; border-radius: 4px; overflow: hidden;">
+                            <div style="height: 100%; width: 95%; background: linear-gradient(90deg, #4CAF50 0%, #2E7D32 100%); border-radius: 4px; transition: width 0.6s ease;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Uptime Progress Bar -->
+                    <div style="margin-bottom: 1rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+                            <span style="font-size: 14px; color: #222222; font-weight: 500;">Uptime</span>
+                            <span style="font-size: 14px; font-weight: 600; color: #4CAF50;">99.99% (Elite)</span>
+                        </div>
+                        <div style="height: 8px; background-color: #E1E1E1; border-radius: 4px; overflow: hidden;">
+                            <div style="height: 100%; width: 100%; background: linear-gradient(90deg, #4CAF50 0%, #2E7D32 100%); border-radius: 4px; transition: width 0.6s ease;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Load Handling Progress Bar -->
+                    <div style="margin-bottom: 1rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+                            <span style="font-size: 14px; color: #222222; font-weight: 500;">Load Handling</span>
+                            <span style="font-size: 14px; font-weight: 600; color: #4CAF50;">19ms (Elite - Fastest)</span>
+                        </div>
+                        <div style="height: 8px; background-color: #E1E1E1; border-radius: 4px; overflow: hidden;">
+                            <div style="height: 100%; width: 100%; background: linear-gradient(90deg, #4CAF50 0%, #2E7D32 100%); border-radius: 4px; transition: width 0.6s ease;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Rating -->
+                    <div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+                            <span style="font-size: 14px; color: #222222; font-weight: 500;">Overall Rating</span>
+                            <span style="font-size: 14px; font-weight: 600; color: #4CAF50;">4.8/5 (Excellent)</span>
+                        </div>
+                        <div style="height: 8px; background-color: #E1E1E1; border-radius: 4px; overflow: hidden;">
+                            <div style="height: 100%; width: 96%; background: linear-gradient(90deg, #4CAF50 0%, #2E7D32 100%); border-radius: 4px; transition: width 0.6s ease;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Section: CTA Button -->
+                <div class="cta-section" style="flex: 0 0 200px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                    <a href="https://hostingstep.com/tested/wp-engine" target="_blank" rel="nofollow" style="display: block; width: 200px; padding: 18px 20px; background: #2B6CB0; color: white; text-decoration: none; border-radius: 4px; font-family: 'Work Sans', sans-serif; font-size: 18px; font-weight: 500; text-align: center; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(43, 108, 176, 0.3); white-space: nowrap; overflow: hidden;">
+                        Visit WP Engine →
+                    </a>
+                    <p style="margin: 10px 0 0; font-size: 12px; color: #626262; text-align: center;">On WP Engine's Website</p>
+                </div>
+            </div>
+
+            <!-- Description Section -->
+            <div class="description-section" style="padding: 0 2rem 2rem 2rem; border-top: 1px solid #F7F7F7;">
+                <div style="padding-top: 1.5rem;">
+                    <p style="font-size: 15px; line-height: 1.6; color: #222222; margin-bottom: 0.8rem;"><strong>Why It's Our Top Pick:</strong> WP Engine has been consistently delivering fastest load handling, TTFB and uptime performance since mid of 2024. Their performance is unmatched for serious business websites.</p>
+                    
+                    <p style="font-size: 15px; line-height: 1.6; color: #4CAF50; margin-bottom: 0.8rem;"><strong>Ideal For:</strong> Business sites, high traffic blogs and WooCommerce sites where performance and reliability matters more than pricing.</p>
+                    
+                    <p style="font-size: 15px; line-height: 1.6; color: #F44336; margin: 0;"><strong>Limitations:</strong> Expensive for small sites, personal and hobby blogs.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Kinsta Card -->
+        <div class="provider-card" data-category="managed" data-ttfb="446" data-uptime="99.96" data-load="27" data-price="360" style="background: white; border-radius: 8px; box-shadow: 0 5px 23px rgba(188, 207, 219, 0.35); padding: 0; position: relative; transition: transform 0.3s ease; overflow: hidden;">
+            
+            <!-- Category Badge -->
+            <div style="position: absolute; top: 0; left: 0; right: 0; background: #4A90E2; color: white; padding: 12px 20px; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; text-align: center;">
+                BEST FOR MANAGED WORDPRESS HOSTING
+            </div>
+            
+            <!-- Main Content Row -->
+            <div class="main-content-row" style="display: flex; align-items: stretch; padding: 3rem 2rem 1.5rem 2rem; gap: 2rem; min-height: 180px;">
+                
+                <!-- Left Section: Provider Info + Highlight -->
+                <div class="provider-info" style="flex: 1; min-width: 280px;">
+                    <!-- Provider Header -->
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                        <img src="https://hostingstep.com/wp-content/uploads/2024/10/Kinsta-logo.jpg" alt="Kinsta" style="width: 60px; height: 60px; border-radius: 8px; object-fit: contain;">
+                        <div>
+                            <h3 style="font-size: 24px; font-weight: 600; color: #222222; margin: 0;">Kinsta</h3>
+                            <p style="font-size: 14px; color: #626262; margin: 0;">Starting Price: $30/month (first month free)</p>
+                        </div>
+                    </div>
+
+                    <!-- Key Highlight -->
+                    <div style="background: #F0F7FF; border-left: 4px solid #2B6CB0; padding: 12px 16px; border-radius: 0 4px 4px 0;">
+                        <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+                            <div style="width: 24px; height: 24px; background: #2B6CB0; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 12px;">&#x1f30d;</div>
+                            <span style="font-weight: 600; color: #222222;">Global Data Centers</span>
+                        </div>
+                        <p style="margin: 0; font-size: 14px; color: #515151; line-height: 1.4;">Access to all 37 Google data center locations and premium tools like APM.</p>
+                    </div>
+                </div>
+
+                <!-- Center Section: Performance Metrics -->
+                <div class="performance-metrics" style="flex: 1; min-width: 300px;">
+                    <h4 style="font-size: 16px; font-weight: 600; color: #222222; margin-bottom: 1.5rem; text-align: center;">PERFORMANCE METRICS</h4>
+                    
+                    <!-- TTFB Progress Bar -->
+                    <div style="margin-bottom: 1rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+                            <span style="font-size: 14px; color: #222222; font-weight: 500;">TTFB</span>
+                            <span style="font-size: 14px; font-weight: 600; color: #66BB6A;">446ms (Strong)</span>
+                        </div>
+                        <div style="height: 8px; background-color: #E1E1E1; border-radius: 4px; overflow: hidden;">
+                            <div style="height: 100%; width: 70%; background: linear-gradient(90deg, #66BB6A 0%, #4CAF50 100%); border-radius: 4px; transition: width 0.6s ease;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Uptime Progress Bar -->
+                    <div style="margin-bottom: 1rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+                            <span style="font-size: 14px; color: #222222; font-weight: 500;">Uptime</span>
+                            <span style="font-size: 14px; font-weight: 600; color: #66BB6A;">99.96% (Strong)</span>
+                        </div>
+                        <div style="height: 8px; background-color: #E1E1E1; border-radius: 4px; overflow: hidden;">
+                            <div style="height: 100%; width: 80%; background: linear-gradient(90deg, #66BB6A 0%, #4CAF50 100%); border-radius: 4px; transition: width 0.6s ease;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Load Handling Progress Bar -->
+                    <div style="margin-bottom: 1rem;">
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+                            <span style="font-size: 14px; color: #222222; font-weight: 500;">Load Handling</span>
+                            <span style="font-size: 14px; font-weight: 600; color: #4CAF50;">27ms (Elite)</span>
+                        </div>
+                        <div style="height: 8px; background-color: #E1E1E1; border-radius: 4px; overflow: hidden;">
+                            <div style="height: 100%; width: 95%; background: linear-gradient(90deg, #4CAF50 0%, #2E7D32 100%); border-radius: 4px; transition: width 0.6s ease;"></div>
+                        </div>
+                    </div>
+
+                    <!-- Data Centers -->
+                    <div>
+                        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 5px;">
+                            <span style="font-size: 14px; color: #222222; font-weight: 500;">Data Centers</span>
+                            <span style="font-size: 14px; font-weight: 600; color: #2B6CB0;">37 Global Locations</span>
+                        </div>
+                        <div style="height: 8px; background-color: #E1E1E1; border-radius: 4px; overflow: hidden;">
+                            <div style="height: 100%; width: 100%; background: linear-gradient(90deg, #2B6CB0 0%, #215387 100%); border-radius: 4px; transition: width 0.6s ease;"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Section: CTA Button -->
+                <div class="cta-section" style="flex: 0 0 200px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                    <a href="https://hostingstep.com/tested/kinsta" target="_blank" rel="nofollow" style="display: block; width: 200px; padding: 18px 20px; background: #2B6CB0; color: white; text-decoration: none; border-radius: 4px; font-family: 'Work Sans', sans-serif; font-size: 18px; font-weight: 500; text-align: center; transition: all 0.3s ease; box-shadow: 0 4px 12px rgba(43, 108, 176, 0.3); white-space: nowrap; overflow: hidden;">
+                        Visit Kinsta →
+                    </a>
+                    <p style="margin: 10px 0 0; font-size: 12px; color: #626262; text-align: center;">On Kinsta's Website</p>
+                </div>
+            </div>
+
+            <!-- Description Section -->
+            <div class="description-section" style="padding: 0 2rem 2rem 2rem; border-top: 1px solid #F7F7F7;">
+                <div style="padding-top: 1.5rem;">
+                    <p style="font-size: 15px; line-height: 1.6; color: #222222; margin-bottom: 0.8rem;"><strong>Why It's Best for Managed WordPress:</strong> If you are picking a multi-site plan, you can host each of your site closer to your target audience from any of the 37 global data center locations. For critical WordPress sites, APM tools are essential.</p>
+                    
+                    <p style="font-size: 15px; line-height: 1.6; color: #4CAF50; margin-bottom: 0.8rem;"><strong>Ideal For:</strong> High traffic sites, resource-intensive WordPress applications, online stores and membership sites.</p>
+                    
+                    <p style="font-size: 15px; line-height: 1.6; color: #F44336; margin: 0;"><strong>Limitations:</strong> Higher pricing. Not suitable for basic blogs.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<style>
+/* Hover Effects */
+.provider-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(188, 207, 219, 0.5);
+}
+
+.filter-btn:hover {
+    background: #2B6CB0 !important;
+    color: white !important;
+}
+
+.filter-btn.active {
+    background: #2B6CB0 !important;
+    color: white !important;
+}
+
+/* CTA Button Hover */
+.provider-card a:hover {
+    background: #215387 !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(43, 108, 176, 0.4) !important;
+}
+
+/* Mobile Responsiveness - Key Responsive Fixes */
+@media (max-width: 768px) {
+    /* Main section padding adjustment */
+    .provider-card .main-content-row {
+        flex-direction: column !important;
+        padding: 2.5rem 1.5rem 1.5rem 1.5rem !important;
+        gap: 1.5rem !important;
+        min-height: auto !important;
+    }
+    
+    /* Provider info section */
+    .provider-card .provider-info {
+        min-width: 100% !important;
+        flex: none !important;
+    }
+    
+    /* Performance metrics section */
+    .provider-card .performance-metrics {
+        min-width: 100% !important;
+        flex: none !important;
+        margin-top: 1rem !important;
+    }
+    
+    /* CTA section */
+    .provider-card .cta-section {
+        flex: none !important;
+        width: 100% !important;
+        margin-top: 1rem !important;
+    }
+    
+    .provider-card .cta-section a {
+        width: 100% !important;
+        max-width: 300px !important;
+    }
+    
+    /* Filter controls */
+    .interactive-controls {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 1rem !important;
+    }
+    
+    .filter-buttons {
+        justify-content: center !important;
+    }
+    
+    /* Typography adjustments */
+    h2 {
+        font-size: 28px !important;
+    }
+    
+    .provider-card h3 {
+        font-size: 20px !important;
+    }
+    
+    /* Description section padding */
+    .provider-card .description-section {
+        padding: 0 1.5rem 2rem 1.5rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Even smaller screens - further adjustments */
+    .provider-card {
+        margin: 0 -0.5rem !important;
+    }
+    
+    .provider-card .main-content-row {
+        padding: 3.5em 1.5rem 1.5rem 1.5rem !important;
+    }
+    
+    .provider-card .description-section {
+        padding: 0 1rem 1.5rem 1rem !important;
+    }
+    
+    h2 {
+        font-size: 24px !important;
+    }
+    
+    .provider-card h3 {
+        font-size: 18px !important;
+    }
+    
+    /* Filter buttons responsive */
+    .filter-btn {
+        font-size: 12px !important;
+        padding: 6px 12px !important;
+    }
+    
+    /* Performance metrics adjustments */
+    .performance-metrics h4 {
+        font-size: 14px !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    /* CTA button adjustments */
+    .provider-card .cta-section a {
+        font-size: 16px !important;
+        padding: 15px 20px !important;
+    }
+}
+
+/* Landscape mobile orientation */
+@media (max-width: 768px) and (orientation: landscape) {
+    .provider-card .main-content-row {
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+    }
+    
+    .provider-card .provider-info {
+        flex: 1 1 100% !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    .provider-card .performance-metrics {
+        flex: 1 1 60% !important;
+    }
+    
+    .provider-card .cta-section {
+        flex: 1 1 35% !important;
+        margin-top: 0 !important;
+    }
+}
+</style>
+
+<script>
+// Filter and Sort Functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const sortSelect = document.getElementById('sortSelect');
+    const providersGrid = document.getElementById('providersGrid');
+    const providerCards = document.querySelectorAll('.provider-card');
+
+    // Filter functionality
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+            // Update active state
+            filterBtns.forEach(b => b.classList.remove('active'));
+            this.classList.add('active');
+            
+            const filterValue = this.getAttribute('data-filter');
+            
+            providerCards.forEach(card => {
+                if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+    });
+
+    // Sort functionality
+    sortSelect.addEventListener('change', function() {
+        const sortValue = this.value;
+        const cardsArray = Array.from(providerCards);
+        
+        if (sortValue === 'default') {
+            // Reset to original order
+            cardsArray.forEach(card => {
+                providersGrid.appendChild(card);
+            });
+            return;
+        }
+        
+        cardsArray.sort((a, b) => {
+            let aVal, bVal;
+            
+            switch(sortValue) {
+                case 'ttfb':
+                    aVal = parseInt(a.getAttribute('data-ttfb'));
+                    bVal = parseInt(b.getAttribute('data-ttfb'));
+                    return aVal - bVal; // Ascending (faster first)
+                case 'uptime':
+                    aVal = parseFloat(a.getAttribute('data-uptime'));
+                    bVal = parseFloat(b.getAttribute('data-uptime'));
+                    return bVal - aVal; // Descending (higher first)
+                case 'load':
+                    aVal = parseInt(a.getAttribute('data-load'));
+                    bVal = parseInt(b.getAttribute('data-load'));
+                    return aVal - bVal; // Ascending (faster first)
+                case 'price':
+                    aVal = parseInt(a.getAttribute('data-price'));
+                    bVal = parseInt(b.getAttribute('data-price'));
+                    return aVal - bVal; // Ascending (cheaper first)
+                default:
+                    return 0;
+            }
+        });
+        
+        // Re-append sorted cards
+        cardsArray.forEach(card => {
+            providersGrid.appendChild(card);
+        });
+    });
+});
+</script>
