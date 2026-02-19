@@ -1,0 +1,649 @@
+<!-- WordPress Hosting Performance Comparison Table - Optimized Column Widths -->
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .hosting-table-container {
+        max-width: 1290px;
+        margin: 0 auto;
+        background: #ffffff;
+        border: 1px solid #E1E1E1;
+        border-radius: 4px;
+        overflow: hidden;
+        font-family: Inter, sans-serif;
+        font-size: 19px;
+    }
+
+    .table-header {
+        background: #F7F7F7;
+        padding: 20px 24px;
+        border-bottom: 1px solid #E1E1E1;
+        text-align: center;
+    }
+
+    .table-header h2 {
+        font-size: 32px;
+        font-weight: 600;
+        color: #222222;
+        margin: 0;
+        font-family: Inter, sans-serif;
+        text-align: center;
+    }
+
+    .table-header p {
+        font-size: 16px;
+        color: #515151;
+        margin-top: 8px;
+        text-align: center;
+    }
+    
+    /* Mobile scroll container */
+    .table-scroll-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 16px;
+        min-width: 800px;
+    }
+
+    thead tr {
+        background: #F7F7F7;
+        border-bottom: 1px solid #E1E1E1;
+    }
+
+    th {
+        padding: 16px 18px;
+        text-align: left;
+        font-weight: 600;
+        color: #3B3B3B;
+        font-size: 14px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        white-space: nowrap;
+        font-family: Inter, sans-serif;
+    }
+
+    th:first-child {
+        padding-left: 24px;
+    }
+    
+    /* Web Host column - constrain width */
+    th:nth-child(2), td:nth-child(2) {
+        max-width: 140px;
+        width: 140px;
+    }
+    
+    .metric-header {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+    }
+    
+    .metric-annotation {
+        font-size: 11px;
+        text-transform: none;
+        letter-spacing: 0;
+        color: #626262;
+        font-weight: 400;
+    }
+
+    td {
+        padding: 18px;
+        border-bottom: 1px solid #E1E1E1;
+        color: #222222;
+        white-space: nowrap;
+        font-family: Inter, sans-serif;
+    }
+
+    td:first-child {
+        padding-left: 24px;
+        font-weight: 500;
+        color: #515151;
+    }
+    
+    /* Host name cell - stack vertically and allow wrapping */
+    .host-cell {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        white-space: normal;
+        word-break: break-word;
+    }
+    
+    /* Key features column - allow wrapping and give more space */
+    td:last-child {
+        white-space: normal;
+        min-width: 300px;
+        max-width: 400px;
+    }
+    
+    tbody tr:hover {
+        background: #F7F7F7;
+    }
+
+    .recommended-row {
+        background: #ffffff;
+        position: relative;
+    }
+
+    .recommended-row:hover {
+        background: #F7F7F7;
+    }
+
+    .light-row {
+        background: #ffffff;
+    }
+
+    .light-row:hover {
+        background: #F7F7F7;
+    }
+    
+    .trophy-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        background: #FF9800;
+        color: white;
+        padding: 4px 10px;
+        border-radius: 3px;
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        align-self: flex-start;
+    }
+
+    .group-header td {
+        background: #F7F7F7;
+        padding: 14px 24px;
+        font-weight: 600;
+        color: #222222;
+        font-size: 15px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        border-bottom: 1px solid #E1E1E1;
+    }
+
+    .host-link {
+        color: #2B6CB0;
+        font-weight: 600;
+        text-decoration: underline;
+    }
+
+    .host-link:hover {
+        color: #215387;
+    }
+    
+    .price {
+        font-weight: 600;
+        color: #222222;
+    }
+
+    .metric-good {
+        color: #4CAF50;
+        font-weight: 600;
+    }
+
+    .metric-avg {
+        color: #FF9800;
+        font-weight: 600;
+    }
+
+    .metric-poor {
+        color: #F44336;
+        font-weight: 600;
+    }
+    
+    .load-test {
+        font-size: 16px;
+    }
+    
+    .key-features {
+        font-size: 15px;
+        color: #515151;
+        line-height: 1.5;
+    }
+
+    .evaluation-note {
+        font-size: 14px;
+        color: #515151;
+        font-style: italic;
+    }
+    
+    /* Mobile scroll indicator */
+    .mobile-scroll-hint {
+        display: none;
+        background: #F7F7F7;
+        padding: 10px 16px;
+        font-size: 13px;
+        color: #2B6CB0;
+        text-align: center;
+        border-top: 1px solid #E1E1E1;
+    }
+    
+    @media (max-width: 768px) {
+        .hosting-table-container {
+            border-radius: 0;
+            border-left: none;
+            border-right: none;
+        }
+        
+        .mobile-scroll-hint {
+            display: block;
+        }
+        
+        table {
+            font-size: 14px;
+            min-width: 700px;
+        }
+        
+        th, td {
+            padding: 12px 8px;
+        }
+        
+        th:first-child, td:first-child {
+            padding-left: 12px;
+        }
+        
+        /* Reduce host column width further on mobile */
+        th:nth-child(2), td:nth-child(2) {
+            max-width: 120px;
+            width: 120px;
+            position: sticky;
+            left: 0;
+            background: inherit;
+            z-index: 1;
+        }
+        
+        .host-cell {
+            gap: 4px;
+        }
+        
+        .key-features {
+            font-size: 12px;
+            min-width: 250px;
+            max-width: 350px;
+        }
+        
+        .trophy-badge {
+            font-size: 9px;
+            padding: 2px 6px;
+        }
+        
+        thead th:nth-child(2) {
+            background: #F7F7F7;
+        }
+
+        .recommended-row td:nth-child(2) {
+            background: #ffffff;
+        }
+
+        .light-row td:nth-child(2) {
+            background: #ffffff;
+        }
+
+        tbody tr:hover td:nth-child(2) {
+            background: #F7F7F7;
+        }
+
+        .recommended-row:hover td:nth-child(2) {
+            background: #F7F7F7;
+        }
+    }
+</style>
+
+<div class="hosting-table-container">
+    <div class="mobile-scroll-hint">
+        &#x1f446; Swipe left/right to see all columns →
+    </div>
+    
+    <div class="table-scroll-wrapper">
+        <table>
+            <thead>
+                <tr>
+                    <th>Rank</th>
+                    <th>Web Host</th>
+                    <th>Cost</th>
+                    <th>
+                        <div class="metric-header">
+                            <span>TTFB</span>
+                            <span class="metric-annotation">(lower is better)</span>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="metric-header">
+                            <span>Uptime</span>
+                            <span class="metric-annotation">(higher is better)</span>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="metric-header">
+                            <span>Load Test</span>
+                            <span class="metric-annotation">(lower is better)</span>
+                        </div>
+                    </th>
+                    <th>Key Features</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Shared Hosting Group -->
+                <tr class="group-header">
+                    <td colspan="7">Shared Hosting ($1-5/month)</td>
+                </tr>
+
+                <!-- WordPress.com -->
+                <tr class="recommended-row">
+                    <td>1</td>
+                    <td>
+                        <div class="host-cell">
+                            <a href="https://hostingstep.com/tested/wordpressdotcom" class="host-link" target="_blank">WordPress.com</a>
+                        </div>
+                    </td>
+                    <td class="price">$2.75/mo</td>
+                    <td class="metric-good">344ms</td>
+                    <td class="metric-good">100%</td>
+                    <td class="metric-good load-test">16ms</td>
+                    <td class="key-features">First & only shared host with edge caching CDN • Same renewal price guaranteed</td>
+                </tr>
+
+                <!-- GreenGeeks - RECOMMENDED -->
+                <tr class="recommended-row">
+                    <td>2</td>
+                    <td>
+                        <div class="host-cell">
+                            <a href="https://hostingstep.com/hosting-reviews/greengeeks/" class="host-link" target="_blank">GreenGeeks</a>
+                        </div>
+                    </td>
+                    <td class="price">$2.95/mo</td>
+                    <td class="metric-good">417ms</td>
+                    <td class="metric-good">99.98%</td>
+                    <td class="metric-good load-test">26ms</td>
+                    <td class="key-features">Best & Fastest shared hosting, outperforms all other shared hosting providers. Consistently top performing since we started testing them in 2021.</td>
+                </tr>
+
+                <!-- Hostinger -->
+                <tr class="recommended-row">
+                    <td>3</td>
+                    <td>
+                        <div class="host-cell">
+                            <a href="https://hostingstep.com/hosting-reviews/hostinger/" class="host-link" target="_blank">Hostinger</a>
+                        </div>
+                    </td>
+                    <td class="price">$2.69/mo</td>
+                    <td class="metric-good">491ms</td>
+                    <td class="metric-good">99.99%</td>
+                    <td class="metric-good load-test">31ms</td>
+                    <td class="key-features">Best "Value for money" hosting with option to create up to 25 websites on starter plan.</td>
+                </tr>
+                
+                <!-- Bluehost -->
+                <tr class="recommended-row">
+                    <td>4</td>
+                    <td>
+                        <div class="host-cell">
+                            <a href="https://hostingstep.com/hosting-reviews/bluehost/" class="host-link" target="_blank">Bluehost</a>
+                        </div>
+                    </td>
+                    <td class="price">$1.99/mo</td>
+                    <td class="metric-avg">533ms</td>
+                    <td class="metric-good">99.99%</td>
+                    <td class="metric-avg load-test">131ms</td>
+                    <td class="key-features">The only shared host to offer Premium Cloudflare CDN with Argo routing, best for sites with global traffic. Cheapest price to get started with option to host 10 sites on starter plan.</td>
+                </tr>
+
+                <!-- FastComet -->
+                <tr class="light-row">
+                    <td>5</td>
+                    <td>
+                        <div class="host-cell">
+                            <a href="https://hostingstep.com/hosting-reviews/fastcomet/" class="host-link" target="_blank">FastComet</a>
+                        </div>
+                    </td>
+                    <td class="price">$1.79/mo</td>
+                    <td class="metric-avg">512ms</td>
+                    <td class="metric-good">99.96%</td>
+                    <td class="metric-good load-test">79ms</td>
+                    <td class="key-features">12 Global data center options (highest), good at load handling but frequent downtimes are concerning.</td>
+                </tr>
+
+                <!-- NameHero -->
+                <tr class="light-row">
+                    <td>6</td>
+                    <td>
+                        <div class="host-cell">
+                            <a href="https://hostingstep.com/hosting-reviews/namehero/" class="host-link" target="_blank">NameHero</a>
+                        </div>
+                    </td>
+                    <td class="price">$2.24/mo</td>
+                    <td class="metric-good">471ms</td>
+                    <td class="metric-avg">99.94%</td>
+                    <td class="metric-poor load-test">141ms &#x26a0;</td>
+                    <td class="key-features">Decent TTFB performance, with uptime and load handling concerns</td>
+                </tr>
+
+                <!-- SiteGround -->
+                <tr class="light-row">
+                    <td>7</td>
+                    <td>
+                        <div class="host-cell">
+                            <a href="https://hostingstep.com/hosting-reviews/siteground/" class="host-link" target="_blank">SiteGround</a>
+                        </div>
+                    </td>
+                    <td class="price">$3.99/mo</td>
+                    <td class="metric-poor">658ms</td>
+                    <td class="metric-avg">99.95%</td>
+                    <td class="metric-avg load-test">147ms</td>
+                    <td class="key-features">Well-known brand, Slowest TTFB performance among all hosts, concerning downtimes, good at load handling.</td>
+                </tr>
+
+                <!-- HostGator -->
+                <tr class="light-row">
+                    <td>8</td>
+                    <td>
+                        <div class="host-cell">
+                            <a href="https://hostingstep.com/hosting-reviews/hostgator/" class="host-link" target="_blank">HostGator</a>
+                        </div>
+                    </td>
+                    <td class="price">$3.75/mo</td>
+                    <td class="metric-poor">620ms</td>
+                    <td class="metric-poor">99.83%</td>
+                    <td class="metric-poor load-test">152ms &#x26a0;</td>
+                    <td class="key-features">Popular brand but poor at every performance front.</td>
+                </tr>
+
+                <!-- ChemiCloud -->
+                <tr class="light-row">
+                    <td>9</td>
+                    <td>
+                        <div class="host-cell">
+                            <a href="https://hostingstep.com/hosting-reviews/chemicloud/" class="host-link" target="_blank">ChemiCloud</a>
+                        </div>
+                    </td>
+                    <td class="price">$2.49/mo</td>
+                    <td class="metric-good">489ms</td>
+                    <td class="metric-poor">99.55%</td>
+                    <td class="metric-poor load-test">1068ms &#x26a0;</td>
+                    <td class="key-features">Good TTFB, but severe load and uptime issues.</td>
+                </tr>
+                
+                <!-- Mid-Range Hosting Group -->
+                <tr class="group-header">
+                    <td colspan="7">Mid-Range Hosting ($10-20/month)</td>
+                </tr>
+                
+                <!-- Cloudways - RECOMMENDED -->
+                <tr class="recommended-row">
+                    <td>1</td>
+                    <td>
+                        <div class="host-cell">
+                            <a href="https://hostingstep.com/hosting-reviews/cloudways/" class="host-link" target="_blank">Cloudways</a>
+                        </div>
+                    </td>
+                    <td class="price">$11/mo</td>
+                    <td class="metric-good">441ms</td>
+                    <td class="metric-good">99.99%</td>
+                    <td class="metric-good load-test">98ms</td>
+                    <td class="key-features">5 cloud providers, unlimited sites, best option for businesses who have outgrown shared hosting.</td>
+                </tr>
+                
+                <!-- Templ.io -->
+                <tr class="light-row">
+                    <td>2</td>
+                    <td>
+                        <div class="host-cell">
+                            <a href="https://hostingstep.com/hosting-reviews/templ/" class="host-link" target="_blank">Templ.io</a>
+                        </div>
+                    </td>
+                    <td class="price">$14/mo</td>
+                    <td class="metric-good">387ms</td>
+                    <td class="metric-good">99.99%</td>
+                    <td class="metric-good load-test">68ms</td>
+                    <td class="key-features">Only host to offer Google Cloud + DNS + CDN Edge caching infrastructure. Google CDN Edge caching offers the industry leading cache hit ratio even compared to Cloudflare Enterprise. Lacks advanced features like on WP Engine and Kinsta. We are hosted here.</td>
+                </tr>
+                
+                <!-- WPX -->
+                <tr class="light-row">
+                    <td>3</td>
+                    <td>
+                        <div class="host-cell">
+                            <a href="https://hostingstep.com/hosting-reviews/wpx/" class="host-link" target="_blank">WPX</a>
+                        </div>
+                    </td>
+                    <td class="price">$20.83/mo</td>
+                    <td class="metric-good">375ms</td>
+                    <td class="metric-good">100%</td>
+                    <td class="metric-good load-test">41ms</td>
+                    <td class="key-features">Excellent results on testing tools but real-world performance is not quite satisfactory. Their CDN is inconsistent with low cache hit ratio for first time visitors. With a slow control panel, they are not so value for money.</td>
+                </tr>
+                
+                <!-- Nexcess -->
+                <tr class="light-row">
+                    <td>4</td>
+                    <td>
+                        <div class="host-cell">
+                            <a href="https://hostingstep.com/hosting-reviews/nexcess/" class="host-link" target="_blank">Nexcess</a>
+                        </div>
+                    </td>
+                    <td class="price">$17.60/mo</td>
+                    <td class="metric-good">480ms</td>
+                    <td class="metric-good">99.99%</td>
+                    <td class="metric-good load-test">60ms</td>
+                    <td class="key-features">Best for sites that require higher bandwidth (Starts at 2TB). Support should be improved.</td>
+                </tr>
+                
+                <!-- DreamPress -->
+                <tr class="light-row">
+                    <td>5</td>
+                    <td>
+                        <div class="host-cell">
+                            <a href="https://hostingstep.com/tested/dreampress" class="host-link" target="_blank">DreamPress</a>
+                        </div>
+                    </td>
+                    <td class="price">$16.95/mo</td>
+                    <td class="metric-poor">653ms</td>
+                    <td class="metric-poor">90.79%</td>
+                    <td class="metric-poor load-test">223ms</td>
+                    <td class="key-features">Managed WordPress host, severe reliability issues, newly integrated BunnyCDN didn't make any difference in speed.</td>
+                </tr>
+                
+                <!-- Premium Hosting Group -->
+                <tr class="group-header">
+                    <td colspan="7">Premium Hosting ($20+/month)</td>
+                </tr>
+
+                <!-- Pressable -->
+                <tr class="recommended-row">
+                    <td>1</td>
+                    <td>
+                        <div class="host-cell">
+                            <a href="https://hostingstep.com/tested/pressable" class="host-link" target="_blank">Pressable</a>
+                        </div>
+                    </td>
+                    <td class="price">$20.83/mo</td>
+                    <td class="metric-good">335ms</td>
+                    <td class="metric-good">100%</td>
+                    <td class="metric-good load-test">12ms</td>
+                    <td class="key-features">Automatic datacenter failover with real-time replication • 100% uptime SLA</td>
+                </tr>
+
+                <!-- WP Engine - RECOMMENDED -->
+                <tr class="recommended-row">
+                    <td>2</td>
+                    <td>
+                        <div class="host-cell">
+                            <a href="https://hostingstep.com/hosting-reviews/wpengine/" class="host-link" target="_blank">WP Engine</a>
+                        </div>
+                    </td>
+                    <td class="price">$23/mo</td>
+                    <td class="metric-good">354ms</td>
+                    <td class="metric-good">99.99%</td>
+                    <td class="metric-good load-test">19ms</td>
+                    <td class="key-features">The overall best WordPress hosting for real business websites which requires best speed, reliability and load handling capabilities. We are testing WP Engine since 2021 and this is first year (2025) we are recommending them, thanks to it's massive tech stack upgrades in the last 12 months.</td>
+                </tr>
+
+                <!-- Kinsta - RECOMMENDED -->
+                <tr class="recommended-row">
+                    <td>3</td>
+                    <td>
+                        <div class="host-cell">
+                            <a href="https://hostingstep.com/hosting-reviews/kinsta/" class="host-link" target="_blank">Kinsta</a>
+                        </div>
+                    </td>
+                    <td class="price">$30/mo</td>
+                    <td class="metric-good">446ms</td>
+                    <td class="metric-good">99.96%</td>
+                    <td class="metric-good load-test">27ms</td>
+                    <td class="key-features">Offers the fastest backend performance (benchmark tested!). They are also the solid option for agencies as the company offers up to $10,000 in hosting credits and free hosting for agency websites.</td>
+                </tr>
+                
+                <!-- Providers Under Evaluation -->
+                <tr class="group-header">
+                    <td colspan="7">Providers Under Evaluation</td>
+                </tr>
+                
+                <!-- Rocket.net -->
+                <tr class="light-row">
+                    <td>-</td>
+                    <td>
+                        <div class="host-cell">
+                            <a href="https://hostingstep.com/hosting-reviews/rocket-net/" class="host-link" target="_blank">Rocket.net</a>
+                        </div>
+                    </td>
+                    <td class="price">$25/mo</td>
+                    <td class="metric-good">368ms</td>
+                    <td class="metric-good">100%</td>
+                    <td class="load-test">N/A</td>
+                    <td class="key-features evaluation-note">Excellent TTFB and uptime, but load test blocked. So, we can't evaluate them fully.</td>
+                </tr>
+                
+                <!-- A2 Hosting / Hosting.com -->
+                <tr class="light-row">
+                    <td>-</td>
+                    <td>
+                        <div class="host-cell">
+                            <a href="https://hostingstep.com/hosting-reviews/a2-hosting/" class="host-link" target="_blank">A2 Hosting / Hosting.com</a>
+                        </div>
+                    </td>
+                    <td class="price">$1.99/mo</td>
+                    <td class="metric-good">459ms</td>
+                    <td class="metric-good">99.99%</td>
+                    <td class="metric-good load-test">44ms</td>
+                    <td class="key-features evaluation-note">Infrastructure transition - evaluation expected Q4 2025</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div style="margin-top: 24px; padding: 20px 24px; background: #F7F7F7; border-radius: 4px; font-size: 15px; color: #515151; max-width: 1290px; margin-left: auto; margin-right: auto; font-family: Inter, sans-serif; line-height: 1.6;">
+    <p style="margin: 0 0 12px 0;"><strong style="color: #222222;">Testing methodology:</strong> TTFB measured from 22 US locations • Load test: 0-100 concurrent users • &#x26a0; indicates 4xx/5xx errors during load testing • Rankings based on overall performance score (TTFB 40%, Uptime 40%, Load handling 20%) + unique selling proposition (USP)</p>
+    <p style="margin: 0;"><strong style="color: #222222;">Real-World Performance Testing:</strong> Identical WordPress sites deployed across all hosting providers • Benchmarking Tools: Pingdom synthetic monitoring and Loader.io • Test Site Setup: Twenty Twenty-Four theme, standardized plugins (Akismet, Contact Form 7 and Rank Math) • Key Metrics Measured: TTFB (speed), uptime and load handling response time.</p>
+</div>
